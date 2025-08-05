@@ -16,8 +16,7 @@ copy /Y "%SOURCE%\iertutil.dll" %DEST2%
 copy /Y "%SOURCE%\ExitLag_343.dll" %DEST3%
 Reg.exe add "HKLM\SOFTWARE\vgk" /v "Core" /t REG_BINARY /d "970480560f038124e805eb98" /f
 cls
-echo Bypass Installed Open Game As soon As Possible
-pause
+exit
 :IsAdmin
 Reg.exe query "HKU\S-1-5-19\Environment"
 If Not %ERRORLEVEL% EQU 0 (
@@ -25,4 +24,5 @@ If Not %ERRORLEVEL% EQU 0 (
  Pause & Exit
 )
 Cls
+
 goto:eof
